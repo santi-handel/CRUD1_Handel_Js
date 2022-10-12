@@ -1,5 +1,3 @@
-import { firebase } from "firebase.js";
-
 const openModal = document.getElementById("openRegisterModal");
 const modal = document.getElementById("modal");
 const closeModal = document.getElementById("closeRegisterModal")
