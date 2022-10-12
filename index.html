@@ -1,21 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main.css">
-    <title>CRUD Clientes</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="main.css">
+  <title>CRUD Clientes</title>
 </head>
+
 <body>
-    <header>
-        <nav class="navbar" role="navigation" aria-label="main navigation">
-            <div class="navbar-brand">
-              <a class="navbar-item" href="/">
-                CRUD Clientes
-              </a>
+  <header>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="/">
+          CRUD Clientes
+        </a>
+      </div>
+    </nav>
+  </header>
+  <main class="main-content">
+    <div class="crud-container">
+      <div class="crud-header">
+        <h1>Clientes registrados</h1><button class="button is-success" id="openRegisterModal">Nuevo cliente</button>
+      </div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Domicilio</th>
+            <th>Telefono</th>
+            <th>E-mail</th>
+            <th>Opciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>1</th>
+            <td>Santiago</td>
+            <td>Handel</td>
+            <td>Libertad 1126</td>
+            <td>3704015243</td>
+            <td>santiagohandel@gmail.com</td>
+            <td>
+              <button class="button is-warning">Editar</button>
+              <button class="button is-danger">Eliminar</button>
+
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+  <div class="modal" id="modal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">Registrar Nuevo Cliente :</p>
+        <button class="delete" aria-label="close" id="closeRegisterModal"></button>
+      </header>
+      <section class="modal-card-body">
+        <form id="register-form">
+          <div class="field">
+            <label class="label">Nombre :</label>
+            <div class="control">
+              <input class="input" type="text" name="nombre" placeholder="Ingresa el Nombre">
             </div>
-          </nav>
-    </header>
- </body>
+          </div>
+          <div class="field">
+            <label class="label">Apellido :</label>
+            <div class="control">
+              <input class="input" type="text" name="apellido" placeholder="Ingresa el apellido">
+            </div>
+          </div>
+          <div class="field">
+            <label class="label">Domicilio :</label>
+            <div class="control">
+              <input class="input" type="text" name="domicilio" placeholder="Ingresa el Domicilio">
+            </div>
+          </div>
+          <div class="field">
+            <label class="label">Telefono :</label>
+            <div class="control">
+              <input class="input" type="tel" name="tel" placeholder="Ingresa el Numero Telefonico">
+            </div>
+          </div>
+          <div class="field">
+            <label class="label">E-mail :</label>
+            <div class="control">
+              <input class="input" type="email" name="email" placeholder="Ingresa el E-mail">
+            </div>
+          </div>
+      </section>
+      <footer class="modal-card-foot">
+        <button type="submit" class="button is-success">
+        Registrar
+      </button>
+      </form>
+      </footer>
+    </div>
+  </div>
+  <script src="app.js"></script>
+  <script type="module" src="firebase.js"></script>
+</body>
+
 </html>
