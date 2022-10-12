@@ -1,0 +1,25 @@
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300&display=swap');
+
+:root{
+    --dark: #001233;
+    --blanco: #ffffff;
+    --amarillo: #ffb703;
+}
+
+body {
+    font-family: 'Noto Sans', sans-serif;
+}
+.navbar{
+    background-color: var(--dark);
+}
+
+.navbar-item{
+    color: var(--blanco);
+    font-weight: bold;
+    font-size: 30px;
+    height: 8vh;
+}
+.navbar-item:hover{
+    color: var(--amarillo) !important
+}
